@@ -9,7 +9,7 @@ export const DeleteButton = ({ userId }: { userId?: string }) => {
   const handleDeleteUser = async () => {
     await signOut();
 
-    fetch(`/`, {
+    fetch(`/api/users/${userId}`, {
       method: 'DELETE',
     })
       .then(res => res.json())
